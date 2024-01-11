@@ -95,20 +95,20 @@ WSGI_APPLICATION = 'bookshop.wsgi.application'
 # }
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env("DB_NAME"),
-        'USER': env("DB_USER"),
-        'PASSWORD': env("DB_PASSWORD"),
-        'HOST': env("DB_HOST"),
-        'PORT': env("DB_PORT"),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': env("DB_NAME"),
+#         'USER': env("DB_USER"),
+#         'PASSWORD': env("DB_PASSWORD"),
+#         'HOST': env("DB_HOST"),
+#         'PORT': env("DB_PORT"),
+#     }
+# }
 DATABASES = {
     'default': dj_database_url.config(
         # Feel free to alter this value to suit your needs.
-        default='postgres://mamarbank_user:LALgYwd0AYd1wgoh3tFD2Mx6wa1tR4Rs@dpg-cm551lmd3nmc73am8kt0-a.oregon-postgres.render.com/mamarbank',
+        default='postgres://book_shop_vgyp_user:65xrkJvuun4gjM74MKfKfvix1b41nXa4@dpg-cmfn5ten7f5s73c793qg-a.oregon-postgres.render.com/book_shop_vgyp',
     )
 }
 
