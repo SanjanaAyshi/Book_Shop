@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Profile Page:</h1>
+
+{% if data %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Number</th>
+      <th scope="col">Book Name</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for dt in data %}
+    <tr>
+      <th scope="row">{{ dt.id }}</th>
+      <td>{{ dt.book.title }}</td>
+      <td>{{ dt.buy }}</td>
+      <td>
+        <a class="btn btn-warning text-white" href="{% url 'return_book' dt.book.id %}">Give it back</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<h4>Sorry!! Nothing purchased....</h4>
+{% endif %}
+{% endblock %}
