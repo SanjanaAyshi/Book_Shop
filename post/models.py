@@ -10,7 +10,7 @@ class Post(models.Model):
     content = models.TextField()
     category = models.ManyToManyField(Category)
     image = models.ImageField(
-        upload_to='posts/media/uploads/', blank=True, null=True)
+        upload_to='post/media/uploads/', blank=True, null=True)
 
     def __str__(self):
         return self.title
