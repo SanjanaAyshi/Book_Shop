@@ -31,7 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 CSRF_TRUSTED_ORIGINS = [
-    'https://book-shop-o6f8.onrender.com', 'https://*.127.0.0.1']
+    'https://hotelplaza.onrender.com/', 'https://*.127.0.0.1']
 
 # Application definition
 
